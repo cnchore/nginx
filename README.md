@@ -39,3 +39,5 @@ server {
 停止：`nginx -s stop`
 
 重载：`nginx reload`
+
+如果提示权限不够，则在最前面加上 sudo
