@@ -8,12 +8,14 @@
 根据项目需求，自行配置，参数说明如下：
 
 `
+
 server {
-        listen       6688;#端口
-        server_name  localhost;#域名
+
+        listen       6688;//端口
+        server_name  localhost;//域名
         underscores_in_headers  on;#cookie允许有下划线
         location /admin/{
-              proxy_set_header Host $host;#代理主机
+              proxy_set_header Host $host;//代理主机
 
               proxy_set_header X-Real-IP $remote_addr;#真实ip
 
@@ -30,6 +32,7 @@ server {
               proxy_cookie_path /admin/ /admin/;#cookie生成路径
         }
 }
+
 `
 ## 3.启动方法：
 
